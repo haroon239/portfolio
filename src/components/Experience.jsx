@@ -1,0 +1,2 @@
+import { experience } from '../data/portfolio'
+export default function Experience(){return <section className="section experience-section container"><div className="section-heading"><div><p className="eyebrow">EXPERIENCE</p><h2>A growing body of work</h2></div><p className="section-note">Focused on outcomes, not job titles.</p></div><div className="timeline">{experience.map(([date,role,place,detail])=><article key={role}><span>{date}</span><div><h3>{role}</h3><b>{place}</b></div><p>{detail}</p></article>)}</div></section>}
