@@ -1,5 +1,71 @@
-import logo from '../assets/logo.png'
+import logo from "../assets/logo.png";
 
 export default function Footer() {
-  return <footer className="footer"><div className="footer-glow"/><div className="footer-inner container"><div className="footer-lead"><a href="#home" className="footer-logo"><img src={logo} alt="Muhammad Haroon - Full Stack Developer" /></a><div><p className="eyebrow">BUILT FOR THE WEB</p><h2>Ideas deserve an<br/><span>exceptional execution.</span></h2></div><a className="footer-circle" href="#home" aria-label="Back to top">↑<small>TOP</small></a></div><div className="footer-divider"/><div className="footer-grid"><div className="footer-about"><div className="footer-available"><i/> Available for selected projects</div><p>Full-stack development for ambitious products, thoughtful brands, and businesses ready to grow.</p><a href="mailto:awais@example.com">awais@example.com <span>↗</span></a></div><nav className="footer-nav" aria-label="Footer navigation"><div><b>EXPLORE</b><a href="#home">Home</a><a href="#about">About</a><a href="#projects">Selected work</a><a href="#services">Services</a></div><div><b>CONNECT</b><a href="https://linkedin.com/" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub <span>↗</span></a><a href="/Muhammad-Awais-Resume.pdf" download>Résumé <span>↓</span></a></div></nav></div><div className="footer-name" aria-hidden="true">MUHAMMAD HAROON</div><div className="footer-bottom"><span>© {new Date().getFullYear()} Muhammad Haroon</span><span>Pakistan · Working worldwide</span><span>Designed with intent. Built with care.</span></div></div></footer>
+  return (
+    <footer className="footer">
+      <div className="footer-glow" />
+      <div className="footer-inner container">
+        <div className="footer-lead">
+          <a href="#home" className="footer-logo">
+            <img src={logo} alt="Muhammad Haroon - Full Stack Developer" />
+          </a>
+          <div>
+            <p className="eyebrow">BUILT FOR THE WEB</p>
+            <h2>
+              Ideas deserve an
+              <br />
+              <span>exceptional execution.</span>
+            </h2>
+          </div>
+          <a className="footer-circle" href="#home" aria-label="Back to top">
+            ↑<small>TOP</small>
+          </a>
+        </div>
+        <div className="footer-divider" />
+        <div className="footer-grid">
+          <div className="footer-about">
+            <div className="footer-available">
+              <i /> Available for selected projects
+            </div>
+            <p>
+              Full-stack development for ambitious products, thoughtful brands,
+              and businesses ready to grow.
+            </p>
+            <a href="mailto:awais@example.com">
+              awais@example.com <span>↗</span>
+            </a>
+          </div>
+          <nav className="footer-nav" aria-label="Footer navigation">
+            <div>
+              <b>EXPLORE</b>
+              <a href="#home">Home</a>
+              <a href="#about">About</a>
+              <a href="#projects">Selected work</a>
+              <a href="#services">Services</a>
+            </div>
+            <div>
+              <b>CONNECT</b>
+              <a href="https://linkedin.com/" target="_blank" rel="noreferrer">
+                LinkedIn <span>↗</span>
+              </a>
+              <a href="https://github.com/" target="_blank" rel="noreferrer">
+                GitHub <span>↗</span>
+              </a>
+              <a href="/Muhammad-Awais-Resume.pdf" download>
+                Résumé <span>↓</span>
+              </a>
+            </div>
+          </nav>
+        </div>
+        <div className="footer-name" aria-hidden="true">
+          MUHAMMAD HAROON
+        </div>
+        <div className="footer-bottom">
+          <span>© {new Date().getFullYear()} Muhammad Haroon</span>
+          <span>Pakistan · Working worldwide</span>
+          <span>Designed with intent. Built with care.</span>
+        </div>
+      </div>
+    </footer>
+  );
 }
