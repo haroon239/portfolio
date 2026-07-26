@@ -45,13 +45,13 @@ export default function Footer() {
             </div>
             <div>
               <b>CONNECT</b>
-              <a href="https://linkedin.com/" target="_blank" rel="noreferrer">
+              <a href="hhttps://www.linkedin.com/in/haroonbutt786" target="_blank" rel="noreferrer">
                 LinkedIn <span>↗</span>
               </a>
-              <a href="https://github.com/" target="_blank" rel="noreferrer">
+              <a href="https://github.com/haroon239" target="_blank" rel="noreferrer">
                 GitHub <span>↗</span>
               </a>
-              <a href="/Muhammad-Awais-Resume.pdf" download>
+              <a href="Haroon_Butt_Resume1.pdf" download>
                 Résumé <span>↓</span>
               </a>
             </div>
