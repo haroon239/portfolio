@@ -31,8 +31,8 @@ export default function Footer() {
               Full-stack development for ambitious products, thoughtful brands,
               and businesses ready to grow.
             </p>
-            <a href="mailto:awais@example.com">
-              awais@example.com <span>↗</span>
+            <a href="mailto:haroon116butt@gmail.com">
+              haroon116butt@gmail.com <span>↗</span>
             </a>
           </div>
           <nav className="footer-nav" aria-label="Footer navigation">
