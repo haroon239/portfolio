@@ -1,17 +1,49 @@
 import { useState } from "react";
+
+const FORM_ENDPOINT =
+  "https://formsubmit.co/ajax/haroon116butt@gmail.com";
+
 export default function Contact() {
-  const [sent, setSent] = useState(false);
-  const submit = (event) => {
+  const [status, setStatus] = useState("idle");
+
+  const submit = async (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    const subject = encodeURIComponent(
-      `Project enquiry from ${data.get("name")}`,
-    );
-    const body = encodeURIComponent(
-      `Name: ${data.get("name")}\nEmail: ${data.get("email")}\nProject: ${data.get("project")}\nBudget: ${data.get("budget")}\n\n${data.get("message")}`,
-    );
-    setSent(true);
-    window.location.href = `mailto:haroon116butt@gmail.com?subject=${subject}&body=${body}`;
+    const form = event.currentTarget;
+    const data = new FormData(form);
+
+    setStatus("submitting");
+
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: data.get("name"),
+          email: data.get("email"),
+          project: data.get("project"),
+          budget: data.get("budget"),
+          message: data.get("message"),
+          _replyto: data.get("email"),
+          _subject: `New portfolio enquiry from ${data.get("name")}`,
+          _template: "table",
+          _honey: data.get("_honey"),
+        }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || result.success === false) {
+        throw new Error("Submission failed");
+      }
+
+      form.reset();
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
   };
   return (
     <section className="contact-wrap container" id="contact">
@@ -40,6 +72,14 @@ export default function Contact() {
         </div>
       </div>
       <form className="contact-form" onSubmit={submit}>
+        <input
+          className="form-honeypot"
+          type="text"
+          name="_honey"
+          tabIndex="-1"
+          autoComplete="off"
+          aria-hidden="true"
+        />
         <div className="form-heading">
           <span>PROJECT ENQUIRY</span>
           <small>Usually replies within 24–48 hours</small>
@@ -88,12 +128,23 @@ export default function Contact() {
             placeholder="What are you building, and what would success look like?"
           />
         </label>
-        <button className="button" type="submit">
-          Send project brief <span>↗</span>
+        <button
+          className="button"
+          type="submit"
+          disabled={status === "submitting"}
+        >
+          {status === "submitting" ? "Sending..." : "Send project brief"}{" "}
+          <span>↗</span>
         </button>
-        {sent && (
+        {status === "success" && (
           <p className="form-note" role="status">
-            Your email app should open with the project details ready to send.
+            Message submitted successfully. Thank you—I&apos;ll reply soon.
+          </p>
+        )}
+        {status === "error" && (
+          <p className="form-note form-error" role="alert">
+            The message could not be sent. Please try again or email me
+            directly.
           </p>
         )}
       </form>
