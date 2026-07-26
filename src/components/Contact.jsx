@@ -11,7 +11,7 @@ export default function Contact() {
       `Name: ${data.get("name")}\nEmail: ${data.get("email")}\nProject: ${data.get("project")}\nBudget: ${data.get("budget")}\n\n${data.get("message")}`,
     );
     setSent(true);
-    window.location.href = `mailto:awais@example.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:haroon116butt@gmail.com?subject=${subject}&body=${body}`;
   };
   return (
     <section className="contact-wrap container" id="contact">
@@ -31,8 +31,8 @@ export default function Contact() {
           and a clear route from idea to launch.
         </p>
         <div className="contact-details">
-          <a href="mailto:awais@example.com">
-            <small>DROP ME A LINE</small>awais@example.com <b>↗</b>
+          <a href="mailto:haroon116butt@gmail.com">
+            <small>DROP ME A LINE</small>haroon116butt@gmail.com <b>↗</b>
           </a>
           <span>
             <small>BASED IN</small>Pakistan · Available worldwide

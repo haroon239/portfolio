@@ -36,7 +36,7 @@ export default function Hero() {
         <div className="social-row">
           <span>Find me online</span>
           <a
-            href="https://github.com/"
+            href="https://github.com/haroon239"
             target="_blank"
             rel="noreferrer"
             aria-label="GitHub"
@@ -44,14 +44,14 @@ export default function Hero() {
             GH
           </a>
           <a
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/haroonbutt786"
             target="_blank"
             rel="noreferrer"
             aria-label="LinkedIn"
           >
             in
           </a>
-          <a href="mailto:awais@example.com" aria-label="Email">
+          <a href="mailto:haroon116butt@gmail.com" aria-label="Email">
             @
           </a>
         </div>

@@ -54,14 +54,28 @@ export default function Projects() {
               <span className="tag">{project.type}</span>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
-              <div className="project-links">
-                <a href="#contact">
-                  Case study <span>↗</span>
-                </a>
-                <a href="#contact">
-                  Live preview <span>↗</span>
-                </a>
-              </div>
+              {(project.caseStudyUrl || project.liveUrl) && (
+                <div className="project-links">
+                  {project.caseStudyUrl && (
+                    <a
+                      href={project.caseStudyUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Case study <span>↗</span>
+                    </a>
+                  )}
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Live preview <span>↗</span>
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
           </article>
         ))}

@@ -12,19 +12,23 @@ export const technologies = [
 export const projects = [
   {
     type: "MERN",
-    title: "CommerceFlow Platform",
+    title: "AutoVibe Platform",
     description:
       "A complete commerce experience with secure checkout, product discovery, and a streamlined admin dashboard.",
     accent: "purple",
     metric: "Full-stack build",
+    caseStudyUrl: "https://auto-vibe-smoky.vercel.app/",
+    liveUrl: "https://auto-vibe-smoky.vercel.app/",
   },
   {
     type: "Next.js",
-    title: "Nexora SaaS",
+    title: "Law Firm Website",
     description:
-      "A conversion-focused SaaS launch experience with refined motion, clear storytelling, and scalable components.",
+      "A modern and responsive law firm website built with Next.js, featuring a professional user interface, smooth animations, service showcase, attorney profiles, consultation booking, and optimized performance for an exceptional user experience.",
     accent: "blue",
     metric: "Performance focused",
+    caseStudyUrl: "https://law-firm-xi-ten.vercel.app/",
+    liveUrl: "https://law-firm-xi-ten.vercel.app/",
   },
   {
     type: "WordPress",
@@ -33,6 +37,8 @@ export const projects = [
       "A premium property discovery platform with smart search, rich listings, and effortless lead generation.",
     accent: "cyan",
     metric: "Lead focused",
+    caseStudyUrl: "",
+    liveUrl: "",
   },
 ];
 export const skills = [
